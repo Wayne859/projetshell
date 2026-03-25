@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# Script principal de SysKit 
+# Permet d'exécuter différentes commandes selon l'argument
 commande="$1"
 
 if test "$commande" 
