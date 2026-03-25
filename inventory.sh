@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# Script pour afficher les informations du système
 show_os() {
 echo "Système d'exploitation :"
 uname -o
