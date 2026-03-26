@@ -18,7 +18,7 @@ fi
 for fichier in "$chemin"/*
 do
 
-if [[ "$fichier" == *.tmp || "$fichier" == *.log || "$fichier" == *.tar ]]
+if [[ "$fichier" == *.tmp || "$fichier" == *.log  ]]
 then
 
 rm "$fichier"

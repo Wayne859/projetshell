@@ -22,5 +22,5 @@ archive="backup/${nom}_${date}.tar"
 tar -cvf "$archive" "$dossier"
 
 echo "Sauvegarde créée : $archive"
-
+mkdir -p logs
 echo "$archive" >> logs/backup.log

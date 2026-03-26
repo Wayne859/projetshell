@@ -5,14 +5,14 @@ rapport="reports/report.txt"
 echo "===== RAPPORT SYSKIT =====" > "$rapport"
 echo "Date : $(date)" >> "$rapport"
 echo "" >> "$rapport"
-
+mkdir -p reports
 echo "===== INFORMATIONS SYSTEME =====" >> "$rapport"
 uname -a >> "$rapport"
 echo "" >> "$rapport"
 
 echo "===== SAUVEGARDES REALISEES =====" >> "$rapport"
 
-if [ -f logs/backup.log ]
+if test -f logs/backup.log 
 then
     cat logs/backup.log >> "$rapport"
 else
@@ -23,7 +23,7 @@ echo "" >> "$rapport"
 
 echo "===== NETTOYAGE =====" >> "$rapport"
 
-if [ -f logs/cleanup.log ]
+if test -f logs/cleanup.log 
 then
     cat logs/cleanup.log >> "$rapport"
 else
@@ -31,5 +31,4 @@ else
 fi
 
 echo "" >> "$rapport"
-
 echo "Rapport généré dans $rapport"

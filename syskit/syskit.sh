@@ -4,7 +4,7 @@
 # Permet d'exécuter différentes commandes selon l'argument
 commande="$1"
 
-if test "$commande"
+if test "$commande" = ""
 then
 echo "Erreur : aucune commande donnée"
 echo "Usage : ./syskit.sh {inventory|backup|cleanup|report}"
